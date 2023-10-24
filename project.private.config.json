@@ -12,6 +12,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/booking/booking",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "packageA/pages/mostPopular/mostPopular",
           "query": "",
           "launchMode": "default",

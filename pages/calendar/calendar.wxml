@@ -1,2 +1,4 @@
-<!--pages/calendar/calendar.wxml-->
-<text>pages/calendar/calendar.wxml</text>
+<van-nav-bar title="日程" />
+<scroll-view class="scrollarea" scroll-y="{{true}}">
+  <van-calendar color="#" show-mark="{{false}}" poppable="{{ false }}" show-confirm="{{ true }}" class="calendar" />
+</scroll-view>

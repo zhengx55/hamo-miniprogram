@@ -9,12 +9,19 @@ Page({
   data: {
     popular_service: [],
     navArr: ['Cleaning', 'Repairing', 'Painting', 'Laundary', 'Appliance', 'Plumbing', 'Shifting'],
-    navIndex: 0,
     loading: false,
   },
 
   _onClickLeft() {
     wx.navigateBack()
+  },
+
+  onNavIndexChange(e) {
+    this.setData({
+      popular_service: MOCK_SERVICES.filter((item) => {
+        return item.type === this.data.navArr[e.detail.value]
+      })
+    })
   },
 
   /**
@@ -26,7 +33,7 @@ Page({
     })
     this.setData({
       popular_service: MOCK_SERVICES.filter((item) => {
-        return item.type === this.data.navArr[this.data.navIndex]
+        return item.type === this.data.navArr[0]
       })
     }, function () {
       wx.hideLoading()

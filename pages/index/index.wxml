@@ -56,10 +56,14 @@
     <text class="text-lg">最受欢迎</text>
     <text class="link" data-link="/packageA/pages/mostPopular/mostPopular" bind:tap="navigateTo">查看全部</text>
   </view>
-  <service-panel></service-panel>
-  <view class="padding-horizontal gray-container">
-    <view wx:for="{{popular_service}}" wx:key="id">
-      <service-card name="{{item.name}}" serviceName="{{item.title}}" rate="{{item.rate}}" reviews="{{item.reviews}}" serviceType="{{item.type}}" price="{{item.price}}" image="{{item.image}}"></service-card>
+  <service-panel bind:sync="onNavIndexChange"></service-panel>
+  <van-empty wx:if="{{popular_service.length === 0}}" description="暂无预订信息" />
+  <block wx:else>
+    <view class="padding-horizontal gray-container">
+      <view wx:for="{{popular_service}}" wx:key="id">
+        <service-card name="{{item.name}}" serviceName="{{item.title}}" rate="{{item.rate}}" reviews="{{item.reviews}}" serviceType="{{item.type}}" price="{{item.price}}" image="{{item.image}}"></service-card>
+      </view>
     </view>
-  </view>
+  </block>
+
 </scroll-view>

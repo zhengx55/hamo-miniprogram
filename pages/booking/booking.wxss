@@ -1,1 +1,10 @@
-/* pages/booking/booking.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.subpage-container {
+  flex: 1;
+}

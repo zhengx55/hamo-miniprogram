@@ -1,5 +1,5 @@
 <van-nav-bar title="热门" left-arrow bind:click-left="_onClickLeft" />
-<service-panel tabIndex="{{navIndex}}"></service-panel>
+<service-panel bind:sync="onNavIndexChange"></service-panel>
 <scroll-view scroll-y type="list" class="padding-horizontal scrollarea" show-scrollbar="false">
   <van-empty wx:if="{{popular_service.length === 0}}" description="暂无预订信息" />
   <block wx:else="">

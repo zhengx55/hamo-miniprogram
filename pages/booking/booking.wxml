@@ -1,2 +1,22 @@
 <!--pages/booking/booking.wxml-->
-<text>pages/booking/booking.wxml</text>
+<van-nav-bar title="订单" />
+<van-tabs active="{{activeTab}}" bind:click="onTabChange" sticky title-active-color="#7210FF" color="#7210FF" line-width='70'>
+  <van-tab title="进行中"></van-tab>
+  <van-tab title="已完成"></van-tab>
+  <van-tab title="已取消"></van-tab>
+</van-tabs>
+<swiper current="{{activeTab}}" circular="{{true}}" class="subpage-container" easing-function="linear" bindchange="onPanelhange">
+  <swiper-item>
+    <scroll-view scroll-with-animation scroll-y></scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <view>
+      <scroll-view scroll-with-animation scroll-y></scroll-view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view>
+      <scroll-view scroll-with-animation scroll-y></scroll-view>
+    </view>
+  </swiper-item>
+</swiper>

@@ -7,13 +7,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    tabIndex: Number
+
   },
 
   /**
    * 组件的初始数据
    */
   data: {
+    tabIndex: 0,
     navArr: ['Cleaning', 'Repairing', 'Painting', 'Laundary', 'Appliance', 'Plumbing', 'Shifting'],
   },
 
@@ -24,11 +25,8 @@ Component({
     _navChange(e) {
       this.setData({
         tabIndex: e.currentTarget.dataset.index
-      }, function () {
-        // wx.showLoading({
-        //   title: '数据加载中',
-        // })
       })
+      this.triggerEvent('sync', { value: this.data.tabIndex })
     },
   },
 
