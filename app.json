@@ -5,26 +5,44 @@
     "pages/profile/profile",
     "pages/calendar/calendar"
   ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/serviceDetails/serviceDetails",
+        "pages/mostPopular/mostPopular",
+        "pages/allSpecials/allSpecials",
+        "pages/allServices/allServices",
+        "pages/service/service"
+      ]
+    },
+    {
+      "root": "packageB",
+      "pages": [
+        "pages/search/search"
+      ]
+    },
+    {
+      "root": "packageC",
+      "pages": [
+        "pages/refund/refund"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
-  },
-  "renderer": "skyline",
-  "rendererOptions": {
-    "skyline": {
-      "defaultDisplayBlock": true,
-      "disableABTest": true,
-      "sdkVersionBegin": "3.0.0",
-      "sdkVersionEnd": "15.255.255"
-    }
+    "navigationStyle": "custom",
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "initialRenderingCache": "static"
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
     "van-loading": "@vant/weapp/loading/index",
-    "van-notify": "@vant/weapp/notify/index"
+    "van-image": "@vant/weapp/image/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index"
   },
   "tabBar": {
     "backgroundColor": "#ffffff",
@@ -33,15 +51,27 @@
     "selectedColor": "#7210FF",
     "list": [
       {
-        "text": "home",
+        "text": "主页",
+        "iconPath": "./assets/icons/home.png",
+        "selectedIconPath": "./assets/icons/homeActive.png",
         "pagePath": "pages/index/index"
       },
       {
-        "text": "bookings",
+        "text": "预订",
+        "iconPath": "./assets/icons/bookings.png",
+        "selectedIconPath": "./assets/icons/bookingsActive.png",
         "pagePath": "pages/booking/booking"
       },
       {
-        "text": "profile",
+        "text": "日程",
+        "iconPath": "./assets/icons/calendar.png",
+        "selectedIconPath": "./assets/icons/calendarActive.png",
+        "pagePath": "pages/calendar/calendar"
+      },
+      {
+        "text": "个人",
+        "iconPath": "./assets/icons/profile.png",
+        "selectedIconPath": "./assets/icons/profileActive.png",
         "pagePath": "pages/profile/profile"
       }
     ],

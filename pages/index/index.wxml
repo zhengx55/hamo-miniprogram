@@ -1,5 +1,65 @@
 <!--index.wxml-->
-<van-nav-bar title="Home" left-text="" right-text="按钮" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
-<scroll-view class="scrollarea" scroll-y type="list">
+<van-nav-bar title="Home" />
+<scroll-view refresher-triggered="pulling" refresher-threshold="80" refresher-enabled="true" class="scrollarea" scroll-y type="list" enable-back-to-top="{{true}}">
+  <view class="between padding-horizontal">
+    <view>
+      <text>User name</text>
+    </view>
+    <view>
+    </view>
+  </view>
+  <view class="between padding-horizontal">
+    <text class="text-lg">特别优惠</text>
+    <text class="link" data-link="/packageA/pages/allSpecials/allSpecials" bind:tap="navigateTo">查看全部</text>
+  </view>
+  <swiper autoplay="true" interval="2000" duration="500" class="vertical-spacing swiper">
+    <swiper-item>
+      <view class="swiper-item">
+        <van-image radius="12" fit="cover" height="150" width="350" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" use-loading-slot use-error-slot>
+          <van-loading slot="loading" type="spinner" size="20" vertical />
+        </van-image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-item">
+        <van-image radius="12" fit="cover" height="150" width="350" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" use-loading-slot use-error-slot>
+          <van-loading slot="loading" type="spinner" size="20" vertical />
+        </van-image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-item">
+        <van-image radius="12" fit="cover" height="150" width="350" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" use-loading-slot use-error-slot>
+          <van-loading slot="loading" type="spinner" size="20" vertical />
+        </van-image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <van-divider />
 
+  <view class="between padding-horizontal">
+    <text class="text-lg">热门服务</text>
+    <text class="link" data-link="/packageA/pages/allServices/allServices" bind:tap="navigateTo">查看全部</text>
+  </view>
+  <van-grid column-num="{{4}}" clickable custom-class="vertical-spacing" border="{{false}}">
+    <van-grid-item use-slot wx:for-item="item" wx:key="id" wx:for="{{service_data}}">
+      <view class="service-container">
+        <view class="most-popular" style="background-color:{{item.background}}">
+          <image src="{{item.image}}" mode="aspectFit" class="icon" />
+        </view>
+        <text class="service-text">{{item.title}}</text>
+      </view>
+    </van-grid-item>
+  </van-grid>
+  <van-divider />
+  <view class="between padding-horizontal">
+    <text class="text-lg">最受欢迎</text>
+    <text class="link" data-link="/packageA/pages/mostPopular/mostPopular" bind:tap="navigateTo">查看全部</text>
+  </view>
+  <service-panel></service-panel>
+  <view class="padding-horizontal gray-container">
+    <view wx:for="{{popular_service}}" wx:key="id">
+      <service-card name="{{item.name}}" serviceName="{{item.title}}" rate="{{item.rate}}" reviews="{{item.reviews}}" serviceType="{{item.type}}" price="{{item.price}}" image="{{item.image}}"></service-card>
+    </view>
+  </view>
 </scroll-view>

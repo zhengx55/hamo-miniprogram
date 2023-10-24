@@ -1,0 +1,30 @@
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #424242;
+  margin-top: 10rpx;
+}
+
+.icon {
+  height: 65rpx;
+}
+
+.most-popular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99rpx;
+  height: 105rpx;
+  width: 105rpx;
+}

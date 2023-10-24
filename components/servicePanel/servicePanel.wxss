@@ -1,0 +1,31 @@
+/* components/servicePanel/servicePanel.wxss */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+.tab-text {
+  border: 2px solid #7210FF;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  color: #7210FF;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.text-active {
+  border: 2px solid #7210FF;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  color: #fff;
+  background-color: #7210FF;
+  font-weight: bold;
+}

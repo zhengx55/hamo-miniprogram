@@ -1,0 +1,6 @@
+<!--components/servicePanel/servicePanel.wxml-->
+<scroll-view scroll-x=" true" class="vertical-spacing padding-horizontal">
+  <view class="nav-wrapper">
+    <text class="{{tabIndex === index ? 'text-active':'tab-text'}} padding-horizontal" wx:for="{{navArr}}" wx:key="index" bindtap="_navChange" data-index="{{index}}">{{item}}</text>
+  </view>
+</scroll-view>

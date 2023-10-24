@@ -1,0 +1,2 @@
+<!--packageA/pages/allSpecials/allSpecials.wxml-->
+<van-nav-bar title="全部优惠" left-arrow bind:click-left="onClickLeft" />

@@ -1,10 +1,53 @@
 /**app.wxss**/
-.container {
-  height: 100%;
+
+.between {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  align-items: center;
+}
+
+.vertical-spacing {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.padding-horizontal {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
   box-sizing: border-box;
-} 
+}
+
+.gray-container {
+  background-color: #efefef;
+  padding-top: 20rpx;
+}
+
+.text-lg {
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #212121;
+}
+
+.text-gray {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #616161;
+}
+
+.text-primary {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #7210FF;
+}
+
+.text-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #212121;
+}
+
+.link {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #7210FF;
+}

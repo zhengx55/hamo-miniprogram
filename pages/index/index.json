@@ -1,5 +1,10 @@
 {
   "usingComponents": {
-    "van-nav-bar": "@vant/weapp/nav-bar/index"
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "service-card": "../../components/serviceCard/serviceCard",
+    "van-divider": "@vant/weapp/divider/index",
+    "service-panel": "../../components/servicePanel/servicePanel"
   }
 }

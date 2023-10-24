@@ -1,0 +1,10 @@
+<van-nav-bar title="热门" left-arrow bind:click-left="_onClickLeft" />
+<service-panel tabIndex="{{navIndex}}"></service-panel>
+<scroll-view scroll-y type="list" class="padding-horizontal scrollarea" show-scrollbar="false">
+  <van-empty wx:if="{{popular_service.length === 0}}" description="暂无预订信息" />
+  <block wx:else="">
+    <view wx:for="{{popular_service}}" wx:key="id">
+      <service-card name="{{item.name}}" serviceName="{{item.title}}" rate="{{item.rate}}" reviews="{{item.reviews}}" serviceType="{{item.type}}" price="{{item.price}}" image="{{item.image}}"></service-card>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,15 @@
+<!--components/serviceCard.wxml-->
+<view class="card-container">
+  <van-image radius="20" fit="cover" height="105" width="105" lazy-load src="{{image}}" use-loading-slot use-error-slot>
+    <van-loading slot="loading" type="spinner" size="20" vertical />
+  </van-image>
+  <view class="info-container">
+    <text class="text-gray">{{name}}</text>
+    <text class="text-title">{{serviceName}}</text>
+    <text class="text-primary">${{price}}</text>
+    <view>
+      <text class="text-gray">{{rate}} | </text>
+      <text class="text-gray">{{reviews}} reviews</text>
+    </view>
+  </view>
+</view>

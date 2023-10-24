@@ -1,0 +1,15 @@
+<!--packageA/pages/allServices/allServices.wxml-->
+<van-nav-bar title="全部服务" left-arrow bind:click-left="_onClickLeft" />
+
+<scroll-view type="list" class="scrollarea">
+  <van-grid column-num="{{4}}" clickable custom-class="vertical-spacing" border="{{false}}">
+    <van-grid-item use-slot wx:for-item="item" wx:key="id" wx:for="{{service_data}}">
+      <view class="service-container">
+        <view class="most-popular" style="background-color:{{item.background}}">
+          <image src="{{item.image}}" mode="aspectFit" class="icon" />
+        </view>
+        <text class="service-text">{{item.title}}</text>
+      </view>
+    </van-grid-item>
+  </van-grid>
+</scroll-view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "service-card": "../../../components/serviceCard/serviceCard",
+    "van-empty": "@vant/weapp/empty/index",
+    "service-panel": "../../../components/servicePanel/servicePanel"
+  }
+}
